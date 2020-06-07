@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <h1 class="text-center text-light pt-5 pb-5">Determine the gender of first name</h1>
+                <h1 class="text-center text-light pt-5 pb-3">Determine the gender of first name</h1>
             </div>
         </div>
         <div  class="row justify-content-center align-items-center">
@@ -24,7 +24,7 @@
                 <div class="card-body">
 
                     <input type="text" class="form-control w-100 p-3" placeholder="Please enter first name" name="name"
-                        id="name" value="">
+                        id="name" value="" onfocus="document.getElementById('note').style.display='none'" onfocusout="document.getElementById('note').style.display='block'">
 
                     <p id="detected-gender" class="btn-success"></p>
                     <button type="submit" class="btn btn-dark" id="get-btn">Know Your Gender</button>
@@ -34,7 +34,7 @@
             </div>
         </div>
         <div class="row justify-content-center pt-5 ">
-            <table class="table table-striped table-dark w-25 text-light d-none" id="result">
+            <table class="table table-bordered bg-light w-25 text-dark d-none" id="result">
                 <tr>
                     <td>Name</td>
                     <td id="result-name"></td>
@@ -56,7 +56,7 @@
         </div>
 
     </div>
-    <div class="row">
+    <div class="row" id = "note">
         <div class="d-sm-block d-md-none ">
             <p class="text-light fixed-bottom text-center"><em>Note : Before entering new Name please click on clear or reload the page. </em></p>
         </div>    
