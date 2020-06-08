@@ -39,6 +39,7 @@ const sendHttpRequest = (method,url) =>{
 const getData = () =>{
 sendHttpRequest('GET',url);
 table.classList.remove("d-none");
+getBtn.disabled=true;
 }
 
 const clearData = () =>{
